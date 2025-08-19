@@ -79,9 +79,8 @@ public class RedBus {
         primoFilter.click();
         WebElement eveningFilter=driver.findElement(By.cssSelector("[aria-label*='18:00']"));
         eveningFilter.click();
+
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
-        System.out.println();
         By busTitlesLocator = By.xpath("//div[contains(@class,'busTitleWrapper')]");
         By endOfListLocator = By.xpath("//div[contains(@class,'endOfResult')]");
         while (true) {
