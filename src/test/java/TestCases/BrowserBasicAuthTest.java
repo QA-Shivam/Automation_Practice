@@ -30,7 +30,7 @@ public class BrowserBasicAuthTest {
         wait= new WebDriverWait(driver, Duration.ofSeconds(10));
     }
     @AfterClass
-    public void tearDow(){
+    public void tearDown(){
         driver.quit();
     }
 
