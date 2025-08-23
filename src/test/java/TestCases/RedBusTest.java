@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.List;
 
-public class RedBus {
+public class RedBusTest {
     public  static WebDriver driver;
     public static  String base_url="https://www.redbus.in/";
     WebDriverWait wait;
