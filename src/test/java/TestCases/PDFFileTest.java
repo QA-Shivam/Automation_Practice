@@ -59,9 +59,9 @@ public class PDFFileTest {
     public void DownloadAndReadPDFFileContent() throws IOException {
         driver.get("https://demo.automationtesting.in/FileDownload.html");
         driver.findElement(By.cssSelector(".btn-primary")).click();
-        wait.until((WebDriver wd) -> {
-            File downloadedFile = new File(downloadFilepath + "\\sampleFile.pdf");
-            return downloadedFile.exists() && downloadedFile.length() > 0;
+        wait.until(driver-> {
+            File downloadFile=new File(downloadFilepath + "\\sampleFile.pdf");
+            return downloadFile.exists() && downloadFile.length()>0;
         });
         PDDocument document = Loader.loadPDF(new File(downloadFilepath + "\\sampleFile.pdf"));
         PDFTextStripper stripper = new PDFTextStripper();
